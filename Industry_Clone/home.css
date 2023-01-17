@@ -5,7 +5,7 @@
     gap: 40px;
     box-sizing: border-box;
     vertical-align: baseline;
-    background-color: #232f3e;
+    background-color:rgb(66, 59, 59);
 }
 nav{
     padding: 0 20px;
@@ -28,6 +28,12 @@ nav{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.leftflex{
+    display: flex;
+        gap: 30px;
+        flex-direction: row;
+        justify-content: space-between;
 }
 .rightflex {
     display: flex;
