@@ -1,0 +1,50 @@
+
+.flex{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    background-color: #232f3e;
+}
+nav{
+    padding: 0 20px;
+    height: 50px;
+}
+.searchbar{
+    display: flex;
+    width: 600px;
+    
+}
+.singin{
+    display: flex;
+    margin: 0;
+    vertical-align: baseline;
+    padding: 0;
+    box-sizing: border-box;
+}
+.track{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.rightflex {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: right;
+}
+.cart{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.center{
+    display: box;
+    justify-content: center;
+    vertical-align: baseline;
+}
