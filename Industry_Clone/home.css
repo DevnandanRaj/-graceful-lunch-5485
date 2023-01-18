@@ -7,6 +7,12 @@
     vertical-align: baseline;
     background-color:rgb(66, 59, 59);
 }
+.top {
+    width: 99%;
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 5px;
+}
 nav{
     padding: 0 20px;
     height: 50px;
@@ -49,8 +55,41 @@ nav{
     box-sizing: border-box;
 
 }
-.center{
-    display: box;
-    justify-content: center;
-    vertical-align: baseline;
+header{
+   padding-top: 10px;
 }
+.container{
+    display: flex;
+    grid-template-columns: repeat(1,fr);
+}
+.maincontainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: auto;
+    padding-top: 1%;
+    padding-left:10%;
+    padding-right: 10%;
+    gap: 2%;
+}
+.leftcontainer img{
+    border: solid red;
+    width: 100%;
+}
+.rightcontainer{
+    border: solid green;
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+}
+.centerbanner{
+    display: flex;
+    border: solid gold;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.centerbanner>img{
+    width: 100%;
+}
+
+
