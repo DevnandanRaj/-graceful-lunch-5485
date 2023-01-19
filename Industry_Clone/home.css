@@ -6,6 +6,7 @@
     box-sizing: border-box;
     vertical-align: baseline;
     background-color:rgb(66, 59, 59);
+    cursor: pointer;
 }
 .top {
     width: 99%;
@@ -28,12 +29,15 @@ nav{
     vertical-align: baseline;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
+
 .track{
     display: flex;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 .leftflex{
     display: flex;
@@ -53,7 +57,14 @@ nav{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 
+}
+.appstore{
+    display: flex;
+}
+.playstore{
+    display: flex;
 }
 header{
    padding-top: 10px;
