@@ -17,19 +17,27 @@
         </div>
         <nav class="flex">
             <div class="leftflex">
+                <a class="leftflex" href="/Industry_Clone/home.html">
             <img class="logo" src="logo.png" alt="logo">
+            </a>
             </div>
             <div class="searchbar">
                 <span class="searchbar">
-                    <button>All Categories</button>
+                    <button>All Categories
+                    </button>
                     <input class="searchbar" type="text" placeholder="Searchbar">
                 </span>
             </div>
             <div class="rightflex">
                 <div class="singin">
-                    <img src="https://www.industrybuying.com/static/svg/signin-icon.svg">
-                    <div>Sing In</div>
+                        <img src="https://www.industrybuying.com/static/svg/signin-icon.svg">
+                    <div>
+                    <div><a href="/Industry_Clone/singin.html">
+                        Sing In
+                    </a>
+                    </div>
                     <div>My Account</div>
+                    </div>
                     <span></span>
                 </div>
                 <div class="track">
@@ -43,8 +51,16 @@
                 <img src="https://www.industrybuying.com/static/svg/cart-icon.svg" alt="">
                 <div><Span>Cart</Span></div>
                 </div>
-                <img src="https://www.industrybuying.com/static/images/android-paly.png" alt="">
-                <img src="https://www.industrybuying.com/static/images/ios-play.png" alt="">
+                <div class="playstore">
+                    <a class="playstore" href="https://play.google.com/store/apps">
+                    <img src="https://www.industrybuying.com/static/images/android-paly.png" alt="">
+                    </a>
+                </div>
+                <div class="appstore">
+                    <a class="appstore" href="https://www.apple.com/in/app-store/">
+                    <img src="https://www.industrybuying.com/static/images/ios-play.png" alt="">
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -58,7 +74,7 @@
                 <img width="100%" src="https://static3.industrybuying.com/homepage/16732564011662983964web-side-bnr-top%20(2)%20(1).png" alt="">
             </div>
             <div>
-                <img src="https://static3.industrybuying.com/homepage/1551767207right-small-reseller2.gif" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJlZm_FhC3Ke-aGY4V7zk61fqrLITzqUOifw&usqp=CAU" alt="">
                 <img src="https://static3.industrybuying.com/homepage/1551767207right-small-reseller2.gif" alt="">
             </div>
     </div>
@@ -74,5 +90,522 @@
     </div>
     </div>
     <script src="/Industry_Clone/home.js"></script>
+    <footer>
+        <div class="footerwraper">
+            <div class="footernav">
+                <ul class="navtab">
+                    <li>
+                        <a aria-controls="shopbycategory" role="tab" data-toggle="tab" href="#shopbycat">
+                            <h3>Shop All
+                                Categories</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-controls="shopbybrand" role="tab" data-toggle="tab" href="#shopbybrand">
+                            <h3>Shop All
+                                Brands</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-controls="popularsearches" role="tab" data-toggle="tab" href="#popularsearches">
+                            <h3>Popular
+                                Searches</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="loginPopup">
+        <div class="popup-content">
+            <div class="login-social">
+                <p class="header hptf">Welcome User!</p>
+                <ul>
+    
+                    <!-- 
+    							<li class="signUpRewards">
+    								Sign in & use your <img src="/static/images/ibreward-icon-common.png" style="width:30px;height:30px;"> IB Cash
+    							</li>
+                                 -->
+                    <li>Get Exclusive Deals &amp; Offers</li>
+                    <li>Unlock 11 Lac+ Products</li>
+    
+                    <li>Buy Now Pay Later (Shop on Credit)</li>
+                    <li>Avail EMI Facility</li>
+                    <li>Cancellation Refund within 24 Hours</li>
+    
+                </ul>
+            </div>
+            <div class="login" id="signin">
+    
+                <form id="multipleMobileUsers" class="multipleMobileUsersSec" method="POST" hidden="">
+    
+                    <span class="CloseBtn AH_PopUpClose">
+                        <img src="/static/svg/homepage/cancel-music.svg">
+                    </span>
+    
+                    <p class="title">Choose Email for Sign In</p>
+                    <div class="multipleMobileUsers-inner">
+                        <p class="quickHeading text-align-cen">There are multiple Email IDs linked with this mobile number.
+                            In order to proceed, please choose one: </p>
+                        <div class="chooseEmailOverflow" id="chooseEmailOverflow"></div>
+                    </div>
+    
+                </form>
+                <form id="newRegisterationForm" class="newRegisterationForm" hidden="">
+                    <span class="CloseBtn AH_PopUpClose">
+                        <img src="/static/svg/homepage/cancel-music.svg">
+                    </span>
+                    <p id="newTitle" class="title"></p>
+                    <p id="quickHeading" class="quickHeading"></p>
+                    <div class="fields">
+                        <label>Email</label>
+                        <input id="registerEmail" type="text" name="email" value="">
+                        <span class="error-mssg" id="emailError" hidden=""></span>
+                        <span class="error-mssg AH_username_error"></span>
+                    </div>
+                    <div class="fields">
+                        <label>Phone Number</label>
+                        <input id="registerPhone" type="text" name="phone" placeholder="Phone Number" value="">
+                        <span class="error-mssg" id="phoneError" hidden=""></span>
+                        <span class="error-mssg AH_username_error"></span>
+                    </div>
+                    <div class="fields">
+                        <label>Your Password</label>
+                        <input id="registerPassword" type="password" name="" placeholder="Password" value="">
+                        <span class="error-mssg" id="passwordError" hidden=""></span>
+                        <span class="error-mssg AH_username_error"></span>
+                    </div>
+                    <button type="button" id="newRegisterationButton" name="button" class="sign-up w-100"
+                        onclick="registerNewPopUp()">Submit</button>
+                </form>
+                <form id="loginForm" method="POST">
+                    <div class="login-form-header">
+                        <span class="CloseBtn AH_PopUpClose">
+                            <img src="/static/svg/homepage/cancel-music.svg">
+                        </span>
+                        <p class="title">Login / Register</p>
+                        <div class="error-mssg server-error AH_SignIn_Error"></div>
+                    </div>
+                    <figure class="login-image">
+                        <img src="/static/images/login-phone.png" alt="Trulli">
+    
+                    </figure>
+    
+                    <div class="loginslidesWrap">
+                        <div class="phno-outer">
+                            <span class="country-code bg-wh">+91</span>
+    
+                            <input type="tel" id="username" name="username" placeholder="Enter Your Phone Number">
+                            <span id="phoneNoError" style="color:red"></span>
+                        </div>
+                        <div class="loginByPWD" id="loginByPWD">
+                            <!--<div class="fields">
+    										<label>Email or Phone</label>
+    										<input id="username" class="username" type="text" name="username" placeholder="Enter email or phone" />
+    										<span class="error-mssg" id="enterEmail" hidden>Please enter your Phone/Email</span>
+                        					<span class="error-mssg" id="error" hidden></span> -->
+                            <!-- <span class="error-mssg AH_username_error"></span>
+    									</div>-->
+    
+                            <!--<div class="fields">
+    										<label>Your Password</label>
+    										<input type="password" name="password" placeholder="************" />
+    										<span class="password"></span>
+    										<span class="error-mssg AH_password_error"></span>
+    									</div>-->
+    
+                            <div class="buttonsflex">
+                                <button id="id_SignInBtn" type="button" class="sign-in" onclick="getLoginOTPPopUp()">Send
+                                    OTP</button>
+                            </div>
+                            <div class="or-hr-line">
+                                <span class="conti">OR Continue With </span>
+    
+                            </div>
+                            <div class="social-login-outer">
+                                <a><span class="newsocial-icone em" id="id_loginWithEmail"><i class="fa fa-envelope	"
+                                            aria-hidden="true"></i> Email </span></a>
+                                <!-- <a href="#" id="AH_firebaseOnLoginPopupFacebook"><span class="newsocial-icone fb"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span></a> -->
+                                <a href="#" id="AH_firebaseOnLoginPopupGoogle"><span class="newsocial-icone gm"><i
+                                            class="fa fa-google" aria-hidden="true"></i> Gmail</span></a>
+                                <!-- <span class="soc-login-txt" id="AH_firebaseOnLoginPopup"></span> -->
+                            </div>
+                            <!-- <div class="socialBlockL">
+    										<div id="socialLoginButtons"></div>
+    										<span class="soc-login-txt" id="AH_firebaseOnLoginPopup">Sign In with your social account!</span>
+    									</div> -->
+    
+    
+                        </div>
+                    </div>
+    
+    
+                    <!-- <div class="socialBlockL">
+                    			<div id="socialLoginButtons">
+    
+                   					 </div>
+    								<span class="soc-login-txt" id="AH_firebaseOnLoginPopup">Sign In with your social account!</span>
+    								<small id="emailNotFound" style="color:red" hidden>Unable to fetch details from Social Account. Try again using Email/Phone and Password</small>
+    							</div> -->
+    
+    
+    
+    
+                    <p></p>
+                    <!-- <div class="ibcash-banner  ibcash-bannerforinner">
+                                       <div class="icon"><img src="/static/images/ibreward-icon-common.png" alt="" /></div>
+    									<div class="signtxt-box">
+    										<span class="signuptxt block">Sign up and earn</span>
+    										<span class="hundred block">300 IB Cash</span>
+    									</div>
+    
+                                    </div> -->
+    
+    
+                </form>
+    
+                <!-- ----------------------------------------------------------------------------- -->
+    
+    
+    
+    
+    
+                <form id="id_otpPopUp" method="POST" hidden="">
+                    <div class="login-form-header">
+                        <span class="CloseBtn AH_PopUpClose">
+                            <img src="/static/svg/homepage/cancel-music.svg">
+                        </span>
+                        <p class="title">Login / Register</p>
+                        <div class="error-mssg server-error AH_SignIn_Error"></div>
+                    </div>
+                    <figure class="login-image">
+                        <img src="/static/images/login-phone.png" alt="Trulli">
+    
+                    </figure>
+                    <p class="otpPopup_subheading">OTP Verification</p>
+                    <div class="phno-outer">
+                        <span class="ent-otp">Enter OTP Code sent to</span> <strong>+91<span
+                                id="id_phone_number"></span></strong>
+                    </div>
+                    <div id="loginByOTP">
+                        <div class="fields otpinput-sec">
+                            <!-- <label>Enter OTP</label> -->
+    
+                            <input id="otp" class="otp" type="text" name="otp" placeholder="Your OTP Here">
+                            <span class="error-mssg" id="otpError" hidden=""></span>
+                            <span class="otpResendSuccess" id="otpResendSuccess" hidden="">New OTP has been sent.</span>
+                            <span class="otp"></span>
+                            <span class="error-mssg AH_otp_error"></span>
+                            <!-- <span id="otpCounter" class="otpCounter"></span> -->
+                            <span class="loader" hidden=""></span>
+                            <span id="otpfewMin" class="otpCounter tryAgainOTP" style="display:none">Try again after 10
+                                minutes</span>
+                            <div class="otp-times otpCounter" id="otpCounter">00:60</div>
+                            <span onclick="resendOTPPopUp()" id="resendOTP" class="resendOTP">Resend OTP</span>
+                            <a id="changeNo" class="changeNo" onclick="changeNO()">Change Number</a>
+                            <span id="otpbackendTime" class="otpCounter otp-times">
+                                Resend enable after----
+    
+                                <span id="otpbackendTimeValue"></span>
+                            </span>
+    
+                        </div>
+                        <div class="buttonsflex">
+                            <button type="button" class="sign-in mar-bot-25" onclick="submitOTPPopUp()">Verify</button>
+                        </div>
+                    </div>
+    
+                    <!-- <p class="not-register"><b>Not registered yet?</b> -->
+                    <!--<a class="" href="javascript:void(0)">Sign Up Now</a>-->
+                    <p></p>
+                    <!-- <div class="ibcash-banner  ibcash-bannerforinner">
+                                       <div class="icon"><img src="/static/images/ibreward-icon-common.png" alt="" /></div>
+    									<div class="signtxt-box">
+    										<span class="signuptxt block">Sign up and earn</span>
+    										<span class="hundred block">300 IB Cash</span>
+    									</div>
+    
+                                    </div> -->
+    
+                </form>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                <!-- ---------------------------------------------------------------- -->
+    
+                <form action="" method="POST" class="AH_SignUpForm" id="registerWithEmail" hidden="">
+                    <div class="login-form-header">
+                        <span class="CloseBtn AH_PopUpClose">
+                            <img src="/static/svg/homepage/cancel-music.svg">
+                        </span>
+                        <p class="title">Login / Register</p>
+                        <div class="ib-cash-message"></div>
+                        <div class="error-mssg-top AH_SignUp_Error pad-l-20 mar-10"></div>
+                    </div>
+                    <figure class="login-image">
+                        <img src="/static/images/envelop.png" alt="Trulli">
+    
+                    </figure>
+                    <div class="phno-outer">
+                        <span class="country-code bg-wh"><img src="/static/images/email.png" alt="Trulli"></span>
+                        <input type="text" class="bac-grey pad-l-50" name="username" id="usernameEmailRegisterationForm"
+                            placeholder="abc@gmail.com">
+                        <span class="error-mssg AH_username_error"></span>
+                    </div>
+                    <div class="phno-outer">
+                        <span class="country-code bg-wh"><img src="/static/images/password_key.png" alt="Trulli"></span>
+                        <input class=" pad-l-50 AH_password" type="password" name="password" placeholder="Create Password"
+                            onkeyup="paswdErr()">
+                        <!-- <span class="view-pass"><img src="/static/images/view-pass.png" alt="Trulli" ></span> -->
+                        <span class="error-mssg AH_password_error" style="font-size:11px;"></span>
+                    </div>
+                    <div class="phno-outer">
+    
+                        <input type="text" class="fname  pad-l-10" name="fullname" placeholder="Full Name">
+                        <span class="error-mssg AH_fullname_error"></span>
+    
+                        <input type="text" class=" pad-l-10"
+                            onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" maxlength="10"
+                            name="phone" max="10" min="0" placeholder="Phone Number">
+                        <span class="error-mssg AH_phone_error"></span>
+    
+                        <input type="text" class=" pad-l-10" name="tin_no" id="gstin_no" maxlength="15"
+                            placeholder="Enter GSTIN number">
+                        <span class="error-mssg AH_tin_no_error"></span>
+                    </div>
+                    <!-- <button type="submit" class="sign-in regd-now">Register Now</button> -->
+                    <div class="loginByPWD">
+                        <div class="buttonsflex">
+                            <button type="submit" class="send-otp sign-in regd-now">CONTINUE</button>
+    
+                            <!--	<span class="orOTP">OR</span>-->
+                            <!--<button id = "send-otp-button" type="button" class="loginSecondryBtn" onclick="getLoginOTPPopUp()">Request OTP</button>-->
+                        </div>
+    
+    
+                    </div>
+    
+                    <p class="not-register" style="text-align:center;font-size:13px;margin-top:20px;">Already registered?
+                        <a class="AH_LoginBtn" href="#">Sign In</a>
+                    </p>
+                    <!-- <div class="ibcash-banner ibcash-bannerforinner ">
+    								<div class="icon"><img src="/static/images/ibreward-icon-common.png" alt=""></div>
+    								 <div class="signtxt-box">
+    									 <span class="signuptxt block">Sign up and earn</span>
+    									 <span class="hundred block">300 IB Cash</span>
+    								 </div>
+    
+    							 </div> -->
+    
+    
+                </form>
+    
+    
+    
+    
+    
+    
+                <!-- ---------------------------------------------------- -->
+    
+    
+    
+    
+                <form id="loginWithEmail" action="/new/login/or/register/" method="POST" class="AH_LoginForm" hidden="">
+                    <div class="login-form-header">
+                        <span class="CloseBtn AH_PopUpClose">
+                            <img src="/static/svg/homepage/cancel-music.svg">
+                        </span>
+                        <p class="title">Login / Register</p>
+                        <div class="error-mssg server-error AH_SignIn_Error"></div>
+                    </div>
+                    <figure class="login-image">
+                        <img src="/static/images/envelop.png" alt="Trulli">
+    
+                    </figure>
+                    <div class="loginslidesWrap">
+                        <div class="phno-outer">
+                            <span class="country-code bg-wh"><img src="/static/images/email.png" alt="Trulli"></span>
+    
+                            <input id="username" class="username AH_checkUserExist username pad-l-50" type="text"
+                                name="username" placeholder="Enter Your Email">
+                            <span id="loginWithEmailResponse" style="color:red"></span>
+                            <span class="error-mssg" id="enterEmail" hidden="">Please enter your Email</span>
+                            <span class="error-mssg" id="error" hidden=""></span>
+                            <!-- <span class="error-mssg AH_username_error"></span> -->
+                        </div>
+    
+                        <div class="phno-outer AH_passwordFeild" hidden="">
+                            <span class="country-code bg-wh"><img src="/static/images/password_key.png" alt="Trulli"></span>
+                            <input type="password" class=" pad-l-50" name="password"
+                                placeholder="Enter Password/OTP sent on your email" id="id_password_email"
+                                onkeyup="enterDataToOtp()">
+    
+                            <span class="password"></span>
+                            <span class="error-mssg AH_password_error"></span>
+                        </div>
+                        <div class="phno-outer" hidden="">
+                            <span class="country-code bg-wh"><img src="/static/images/password_key.png" alt="Trulli"></span>
+                            <input type="text" name="otp" placeholder="Enter OTP/Password sent on your email"
+                                id="id_otp_hidden">
+                            <span class="otp"></span>
+                            <span class="error-mssg AH_otp_error"></span>
+                        </div>
+                        <div class="loginByPWD" id="loginByPWD">
+                            <!-- <button onclick="checkUserExist()" type="button">press</button> -->
+                            <div class="buttonsflex AH_CheckUserExistButton">
+                                <button class="send-otp " id="id_SignInBtn" onclick="checkUserExist()"
+                                    type="button">CONTINUE</button>
+                            </div>
+                            <div class="AH_userSignInButton" hidden="">
+                                <div class="buttonsflex">
+                                    <button id="id_SignInBtn" type="submit" class="send-otp">CONTINUE</button>
+                                </div>
+                            </div>
+                            <span class="for-pass"><a href="javascript:void(0);" class="AH_OpenForgotPassword">Forgot
+                                    Password?</a></span>
+    
+                            <div class="or-hr-line">
+                                <span class="conti">OR Continue With </span>
+    
+                            </div>
+                            <div class="social-login-outer">
+                                <a><span class="newsocial-icone em" id="id_loginWithOtp"><i class="fa fa-phone"
+                                            aria-hidden="true"></i> OTP</span></a>
+                                <!-- <a href="#" id="AH_firebaseOnLoginPopupFacebook"><span class="newsocial-icone fb"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span></a> -->
+                                <a href="#" id="AH_firebaseOnLoginPopupGoogle"><span class="newsocial-icone gm"><i
+                                            class="fa fa-google" aria-hidden="true"></i> Gmail</span></a>
+                                <!-- <span class="soc-login-txt" id="AH_firebaseOnLoginPopup"></span> -->
+                            </div>
+    
+    
+    
+    
+    
+                            <!-- <div class="socialBlockL">
+    										<div id="socialLoginButtons"> -->
+                            <!-- <span class="soc-login-txt" id="AH_firebaseOnLoginPopup">Sign In with your social account!</span> -->
+                            <!-- <small id="emailNotFound" style="color:red" hidden>Unable to fetch details from Social Account. Try again using Email/Phone and Password</small>
+    										</div>
+    									</div> -->
+                        </div>
+                    </div>
+    
+                    <!-- <p class="not-register"><b>Not registered yet?</b> -->
+                    <!--<a class="" href="javascript:void(0)">Sign Up Now</a>-->
+                    <p></p>
+                    <!-- <div class="ibcash-banner  ibcash-bannerforinner ">
+    
+                                       <div class="icon"><img src="/static/images/ibreward-icon-common.png" alt="" /></div>
+    									<div class="signtxt-box">
+    										<span class="signuptxt block">Sign up and earn</span>
+    										<span class="hundred block">300 IB Cash</span>
+    									</div>
+    
+                                    </div> -->
+    
+                </form>
+                <!-- ---------------------------------------------------------------- -->
+    
+    
+    
+    
+    
+    
+    
+    
+                <!-- ---------------------------------------------------------------- -->
+    
+                <!-- ---------------------- -->
+                <div id="thankYouMess" hidden="">
+                    <div class="thank-you-mess">
+                        <div class="thanku-inner">
+    
+                            <img src="/static/images/thank_you.png" alt="Trulli">
+                            <h4>THANK YOU!</h4>
+                            <p>Thank you for registering with us</p>
+                            <button id="id_SignInBtn" type="submit" class="continue"
+                                onclick="window.location.reload()">CONTINUE</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <form id="newRegisterationFormWithPhone" hidden="">
+    
+                    <div class="login-form-header">
+                        <span class="CloseBtn AH_PopUpClose">
+                            <img src="/static/svg/homepage/cancel-music.svg">
+                        </span>
+                        <p class="title">Login / Register</p>
+                        <div class="error-mssg server-error AH_SignIn_Error"></div>
+                    </div>
+                    <div class="phone_verified-outer">
+                        <div class="phone_verified">
+                            <h3>Phone number verified <img src="/static/images/verified.png" alt="Trulli"></h3>
+                            <!-- <h4>Your phone has been verified.</h4> -->
+                        </div>
+    
+                    </div>
+    
+                    <p class="detail-para">Please provide these details to complete your registration.</p>
+    
+    
+                    <div class="phno-outer phver-sec">
+    
+    
+                        <input type="text" class="pad-l-10" id="newUserName" name="fname" placeholder="Full Name">
+                        <br>
+                        <span id="registerWithPhoneNameValidation" style="color:red"></span>
+                        <input type="email" class="pad-l-10" id="newUserEmail" name="email" placeholder="Email ID">
+                        <br>
+                        <span id="registerWithPhoneEmailValidation" style="color:red"></span>
+                        <input type="text" class="pad-l-10" id="newUserGstin_no" name="gstin_no" placeholder="GSTIN Number">
+                    </div>
+                    <div id="newUserError" style="color:red;"></div>
+                    <div class="loginByPWD">
+    
+                        <div class="buttonsflex">
+                            <button id="id_UserRegistrationBtn" type="button" class="sign-in mar-bot-25"
+                                onclick="user_registration()">REGISTER NOW</button>
+                        </div>
+    
+    
+                    </div>
+    
+                    <!-- <div class="ibcash-banner ibcash-bannerforinner ">
+    								<div class="icon"><img src="/static/images/ibreward-icon-common.png" alt=""></div>
+    								 <div class="signtxt-box">
+    									 <span class="signuptxt block">Sign up and earn</span>
+    									 <span class="hundred block">300 IB Cash</span>
+    								 </div>
+    
+    							 </div> -->
+    
+                </form>
+                <!-- ---------------------------------------------------------------- -->
+                <!-- <div class="thank-you-mess" id="thankYouMess" hidden>
+    
+    							<img src="/static/images/thank_you.png" alt="Trulli">
+    							<h4>THANK YOU!</h4>
+    							<P>Thank you for register with us</P>
+    							<a href="/"><button id="id_registered_continue" type="button" class="sign-in">CONTINUE</button></a>
+    						</div> -->
+    
+                <!-- ---------------------------------------------------------------- -->
+    
+    
+    
+            </div>
+        </div>
+    </div>
 </body>
 </html>
