@@ -102,5 +102,48 @@ header{
 .centerbanner>img{
     width: 100%;
 }
+.Ip-products{
+    display:block;
 
-
+}
+.products{
+    display: grid;
+    border: solid tan;
+}
+.footernav ul{
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.footer-tab{
+    display: flex;
+    background-color: gray;
+    box-sizing: content-box;
+    justify-content: center;
+}
+.footer-tab ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5%;
+    padding: 2%;
+    font-size: 20px;
+}
+.companySec{
+    justify-content: center;
+    display: flex;
+    background-color: rgb(66, 59, 59);
+}
+.midfooter{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-evenly;
+}
+.botfooter{
+    display: flex;
+    border: solid wheat;
+    justify-content: space-around;
+    padding: 2%;
+    background-color: rgb(66, 59, 59);
+}
