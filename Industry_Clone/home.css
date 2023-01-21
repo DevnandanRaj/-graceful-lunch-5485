@@ -147,3 +147,14 @@ header{
     padding: 2%;
     background-color: rgb(66, 59, 59);
 }
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    justify-content: center;
+    border: solid red;
+}
+#product-container>div>img{
+    height: 400px;
+    width: 100%;
+}
