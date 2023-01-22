@@ -27,19 +27,21 @@ window.addEventListener("load", function () {
 
 
 //products api
+let arr = [];
 let API = "https://63c66b68d307b7696738a8cf.mockapi.io/products"
     async function FetchData(){
       try{
         let request=await fetch(API);
-       let  data= await request.json();
+        let data = await request.json();
+
+        arr=data
         console.log(data);
         DisplayProduct(data)
       }catch(err){
         console.log(err)
       }
-    }
+}
     FetchData()
-
     let CartArr = JSON.parse(localStorage.getItem("cart"))||[];
 
     let Container = document.getElementById("product-container")
@@ -94,4 +96,24 @@ let API = "https://63c66b68d307b7696738a8cf.mockapi.io/products"
       }
     }
     return false;
-    }
+}
+    let inpbox=document.querySelector(".search")
+    
+
+    inpbox.addEventListener("submit", (e) => {
+        e.preventDefault();
+       
+        let searchParams = inpbox.search.value;
+  
+        let filtered =  arr.filter((element) => {
+          if (
+            element.name.toUpperCase().includes(searchParams.toUpperCase()) ===
+            true
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        DisplayProduct(filtered);
+      });

@@ -20,8 +20,10 @@ nav{
 }
 .searchbar{
     display: flex;
-    width: 600px;
-    
+}
+.search{
+    display: flex;
+    flex-direction: row;
 }
 .singin{
     display: flex;
@@ -83,18 +85,15 @@ header{
     gap: 2%;
 }
 .leftcontainer img{
-    border: solid red;
     width: 100%;
 }
 .rightcontainer{
-    border: solid green;
     display: flex;
     flex-direction: row;
     flex-direction: column;
 }
 .centerbanner{
     display: flex;
-    border: solid gold;
     justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
@@ -108,7 +107,6 @@ header{
 }
 .products{
     display: grid;
-    border: solid tan;
 }
 .footernav ul{
     display: flex;
@@ -142,7 +140,6 @@ header{
 }
 .botfooter{
     display: flex;
-    border: solid wheat;
     justify-content: space-around;
     padding: 2%;
     background-color: rgb(66, 59, 59);
@@ -150,11 +147,15 @@ header{
 #product-container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
-    border: solid red;
+    padding: 5%;
 }
 #product-container>div>img{
     height: 400px;
     width: 100%;
+}
+#product-container>div{
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
