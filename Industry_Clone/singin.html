@@ -1,178 +1,304 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Register</title>
     <style>
+               .flex{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    background-color:rgb(66, 59, 59);
+    cursor: pointer;
+}
+.top {
+    width: 99%;
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 5px;
+}
+nav{
+    padding: 0 20px;
+    height: 50px;
+}
+.searchbar{
+    display: flex;
+    width: 600px;
+    
+}
+.singin{
+    display: flex;
+    margin: 0;
+    vertical-align: baseline;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.track{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.leftflex{
+    display: flex;
+        gap: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.rightflex {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: right;
+}
+.cart{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+.appstore{
+    display: flex;
+}
+.playstore{
+    display: flex;
+}
+header{
+   padding-top: 10px;
+}
         *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: sans-serif;
         }
-
-        body{
-            margin: 0;
-	        padding: 0;
-	        display: flex;
-	        justify-content: center;
-	        align-items: center;
-	        min-height: 100vh;
-            background-color: #444;
+        .main{
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(/Industry_Clone/banner.jpg);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
         }
-        .container{
+        .form-box{
+            width: 380px;
+            height: 480px;
             position: relative;
-            width: 70vw;
-            height: 80vh;
+            margin: 6% auto;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px 0 rgb(0,0,0,0.3), 0 4px 20px 0 rgb(0,0,0,0.3);
+            padding: 5px;
             overflow: hidden;
         }
-        .container::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -50%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(-45deg,orange,brown);
-            z-index: 6;
-            transform: translateX(100%);
-            transition: 1s ease-in-out;
+        .button-box{
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px #ff61241f;
+            border-radius: 30px;
         }
-        .Singin-singup{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            z-index: 5;
-        }
-        form{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 40%;
-            min-width: 238px;
-            padding: 0 10px;
-        }
-        .title{
-            font-size: 35px;
-            color: orange;
-            margin: 10px;
-        }
-        .input-field{
-            width: 100%;
-            height: 50px;
-            background: whitesmoke;
-            margin: 10px 0;
-            border: 2px solid palevioletred;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-        }
-        .input-field i{
-            flex: 1;
-            text-align: center;
-        }
-        .input-field input{
-            flex: 5;
-            background: none;
-            border: none;
+        .toggle-btn{
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
             outline: none;
-            width: 100%;
-            font-size: 18px;
-            font-weight: 600;
-            color: #444;
+            position: relative;
         }
-        .btn{
-            width: 150px;
-            height: 50px;
-            border: none;
-            border-radius: 50px;
-            background: orange;
-            color: white;
-            font-weight: 600;
-            margin: 10px 0;
-            text-transform: uppercase;
-        }
-        .btn:hover{
-            background: orange;
-        }
-        .panels-container{
-            position: absolute;
+        #btn{
             top: 0;
             left: 0;
-            width: 100%;
+            position: absolute;
+            width: 110px;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            background: linear-gradient(to right,#ff105f,#ffad06);
+            border-radius: 30px;
+            transition: .5s;
         }
-        .panel{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            width: 35%;
-            min-width: 238px;
-            padding: 0 10px;
-            text-align: center;
-            z-index: 6;
+        .input-group{
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
         }
-        .content{
-            color: aliceblue;
-        }
-        .panel h3{
-            font-size: 24px;
-            font-weight: 600;
-        }
-        .container.sing-up-mode::before{
-            transform: translateX(0);
-        }
-        .image{
+        .input-feild{
             width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+        .submit-btn{
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right,#ff105f,#ffad06);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        .check-box{
+            margin: 30px 10px 30px 0;
+        }
+        span{
+            color: #777;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+        #Login{
+            left: 50px;
+        }
+        #Register{
+            left: 450px;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="Singin-singup">
-            <form action="" class="sign-in">
-                <h2 class="title">Sign in</h2>
-                <div class="input-field">
-                    <i class="user"></i>
-                    <input type="text" placeholder="Username">
+    <header>
+        <div class="top">
+            <font color="red">+91 8976541243</font>
+            <div>or call us on</div>
+            <font color="red">ShopforIndustry@gmail.com</font>
+            <div>For any query, email us at</div>
+        </div>
+        <nav class="flex">
+            <div class="leftflex">
+                <a class="leftflex" href="/Industry_Clone/home.html">
+                    <img class="logo" src="logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="searchbar">
+                <span class="searchbar">
+                    <button>All Categories
+                    </button>
+                    <input class="searchbar" type="text" placeholder="Searchbar">
+                </span>
+            </div>
+            <div class="rightflex">
+                <div class="singin">
+                    <img src="https://www.industrybuying.com/static/svg/signin-icon.svg">
+                    <div>
+                        <div><a href="/Industry_Clone/singin.html">
+                                Sing In
+                            </a>
+                        </div>
+                        <div>My Account</div>
+                    </div>
+                    <span></span>
                 </div>
-                <div class="input-field">
-                    <i class="pass"></i>
-                    <input type="password" placeholder="Password">
+                <div class="track">
+                    <img src="https://www.industrybuying.com/static/svg/track-order-icon.svg" alt="">
+                    <div>
+                        <span>Track</span>
+                        <span>Order</span>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <i class="pass"></i>
-                    <input type="password" placeholder="Confirm Password">
+                <div class="cart">
+                    <img src="https://www.industrybuying.com/static/svg/cart-icon.svg" alt="">
+                    <div><Span><a href="/Industry_Clone/cart.html">Cart</a></Span></div>
                 </div>
-                <input type="submit" value="Login" class="btn">
+                <div class="playstore">
+                    <a class="playstore" href="https://play.google.com/store/apps">
+                        <img src="https://www.industrybuying.com/static/images/android-paly.png" alt="">
+                    </a>
+                </div>
+                <div class="appstore">
+                    <a class="appstore" href="https://www.apple.com/in/app-store/">
+                        <img src="https://www.industrybuying.com/static/images/ios-play.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <form class="input-group" id="Login">
+                <input type="text" class="input-feild" placeholder="User Id" required id="userid">
+                <input type="text" class="input-feild" placeholder="Enter Password" required id="pass">
+                <input type="checkbox" class="check-box"><span>Remember Passsword</span>
+                <button type="submit" class="submit-btn" id="log">LogIn</button>
             </form>
-            <form action="" class="sign-up-form">
-                <h2 class="title">Sign Up</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username">
-                </div>
-                <div class="input-field">
-                    <i class="pass"></i>
-                    <input type="password" placeholder="Password">
-                </div>
-                <input type="submit" value="Sing up" class="btn">
+            <form class="input-group" id="Register">
+                <input type="text" class="input-feild" placeholder="User Id" required id="reguser">
+                <input type="email" class="input-feild" placeholder="Enter Email" required>
+                <input type="text" class="input-feild" placeholder="Enter Password" required id="regpass">
+                <button type="submit" class="submit-btn" id="reg">Register</button>
             </form>
         </div>
     </div>
-
 </body>
+<script>
+    var x = document.getElementById("Login");
+    var y = document.getElementById("Register");
+    var z = document.getElementById("btn");
+    function register(){
+        x.style.left="-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+    function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+    let regEl = document.getElementById("Register");
+    let reguser = document.getElementById("reguser")
+    let regPass = document.getElementById("regpass")
+    let regData = JSON.parse(localStorage.getItem("reg-data"));
+        if (regData == null) {
+            regData = [];
+        }
+    regEl.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let formData = {
+            user1: reguser.value,
+            pass1: regPass.value,
+        };
+        regData.push(formData);
+        localStorage.setItem("reg-data", JSON.stringify(regData));
+    });
+    console.log(regData)
+    let User = document.getElementById("userid")
+    let password = document.getElementById("pass");
+    let alert1=document.getElementById("alert")
+    let storeddata = JSON.parse(localStorage.getItem("reg-data"))
+    document.getElementById("Login").addEventListener("submit", (e) => {
+           e.preventDefault();
+            let obj1 = {
+                UserInp: User.value,
+                passInp: password.value,
+            };
+            for (let i = 0; i < storeddata.length; i++) {
+                if (
+                    storeddata[i].user1 == obj1.UserInp &&
+                    storeddata[i].pass1 == obj1.passInp
+                ) {
+                    window.location.href = "./home.html"
+                } else {
+                    window.location.href = "./singin.html"
 
+                }
+            }
+        })
+</script>
 </html>

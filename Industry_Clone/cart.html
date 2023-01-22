@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        #cart-product{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            justify-content: center;
+        }
+        #cart-product>div>img{
+            height: 400px;
+            width: 100%;
+        }
+        #cart-product>div{
+            text-align: center;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        .flex{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    background-color:rgb(66, 59, 59);
+    cursor: pointer;
+}
+.top {
+    width: 99%;
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 5px;
+}
+nav{
+    padding: 0 20px;
+    height: 50px;
+}
+.searchbar{
+    display: flex;
+    width: 600px;
+    
+}
+.singin{
+    display: flex;
+    margin: 0;
+    vertical-align: baseline;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.track{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.leftflex{
+    display: flex;
+        gap: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.rightflex {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: right;
+}
+.cart{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+.appstore{
+    display: flex;
+}
+.playstore{
+    display: flex;
+}
+header{
+   padding-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <font color="red">+91 8976541243</font>
+            <div>or call us on</div>
+            <font color="red">ShopforIndustry@gmail.com</font>
+            <div>For any query, email us at</div>
+        </div>
+        <nav class="flex">
+            <div class="leftflex">
+                <a class="leftflex" href="/Industry_Clone/home.html">
+                    <img class="logo" src="logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="searchbar">
+                <span class="searchbar">
+                    <button>All Categories
+                    </button>
+                    <input class="searchbar" type="text" placeholder="Searchbar">
+                </span>
+            </div>
+            <div class="rightflex">
+                <div class="singin">
+                    <img src="https://www.industrybuying.com/static/svg/signin-icon.svg">
+                    <div>
+                        <div><a href="/Industry_Clone/singin.html">
+                                Sing In
+                            </a>
+                        </div>
+                        <div>My Account</div>
+                    </div>
+                    <span></span>
+                </div>
+                <div class="track">
+                    <img src="https://www.industrybuying.com/static/svg/track-order-icon.svg" alt="">
+                    <div>
+                        <span>Track</span>
+                        <span>Order</span>
+                    </div>
+                </div>
+                <div class="cart">
+                    <img src="https://www.industrybuying.com/static/svg/cart-icon.svg" alt="">
+                    <div><Span><a href="/Industry_Clone/cart.html">Cart</a></Span></div>
+                </div>
+                <div class="playstore">
+                    <a class="playstore" href="https://play.google.com/store/apps">
+                        <img src="https://www.industrybuying.com/static/images/android-paly.png" alt="">
+                    </a>
+                </div>
+                <div class="appstore">
+                    <a class="appstore" href="https://www.apple.com/in/app-store/">
+                        <img src="https://www.industrybuying.com/static/images/ios-play.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="cart-product"></div>
+</body>
+<script>
+    let LSData=JSON.parse(localStorage.getItem("cart"));
+    if(LSData===null){
+        LSData=[];
+    }
+    let CartDisplay = document.getElementById("cart-product");
+    display(LSData)
+    function display(data){
+        CartDisplay.innerHTML=null;
+         data.forEach((product, i) => {
+            let card = document.createElement("div");
+            let image = document.createElement("img");
+            let brand = document.createElement("h3");
+            let category = document.createElement("p");
+            let details = document.createElement("p");
+            let price = document.createElement("h4");
+            let Buy = document.createElement("button");
+
+
+            image.src = product.image;
+            brand.textContent = product.name;
+            category.textContent = product.category;
+            price.textContent = `₹${product.price}`;
+            details.textContent = product.title;
+            Buy.textContent = "Buy";
+
+
+            card.append(image, brand, price, details, category,Buy);
+            CartDisplay.append(card);
+
+        });
+
+        
+    }
+</script>
+</html>
